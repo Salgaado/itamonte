@@ -234,3 +234,88 @@ b {
   background-color: #4E3D1B;
   color: #FFFFFF;
 }
+
+
+/* vitrine */
+
+/* Container geral */
+.links-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+.links-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1440px;
+  height: 340px;
+  width: 100%;
+}
+
+/* Cada “big link” */
+.big-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Backgrounds alternados: itens 1 e 3 / 2 e 4 */
+.links-container .big-link:nth-child(odd) {
+  background-color: #F8F8F8; /* ajusta pro tom do seu Figma */
+}
+.links-container .big-link:nth-child(even) {
+  background-color: #FBFBFB;
+}
+
+/* Título */
+.big-link h3 {
+  margin: 16px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  color: #202020;
+}
+
+/* Wrapper da imagem para controlar o scale */
+.image-wrapper {
+  position: relative;
+  flex: 1;      
+  text-align: center;
+}
+.image-wrapper img {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Efeito hover: scale na imagem */
+.big-link:hover .image-wrapper img {
+  transform: scale(1.10);
+}
+
+/* Tarja interna (overlay) */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 14px;
+  background: #202020;  /* cor da tarja */
+  color: #FFF;
+  transform: translateY(100%);          /* escondida inicialmente */
+  transition: transform 0.3s ease;
+  font-family: Poppins, sans-serif;
+  font-weight: 300;
+}
+
+/* Revela a tarja no hover */
+.big-link:hover .overlay {
+  transform: translateY(0);
+}
