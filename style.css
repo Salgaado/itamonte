@@ -1,0 +1,236 @@
+/* Reset e base */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header transparente */
+.hero-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navegação */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #000;
+  font-family: Poppins;
+  font-size: 17.17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.btn-contato {
+  background-color: #202020; 
+  padding: 10px 20px;
+  border-radius: 17px;
+  font-weight: bold;
+  color: white !important;
+}
+
+/* Hero section com slide */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: -1;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin-top: 300px;
+}
+
+
+.hero-content h1 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  font-size: 68px;
+  margin-bottom: 20px;
+  line-height: normal;
+  letter-spacing: -0.682px;
+  color: #211200;
+}
+
+.hero-content p {
+  font-family: poppins, sans-serif;
+  color: #202020;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+b {
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+/* catalogos */
+
+.landing-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;            /* espaço entre os cards */
+  align-items: center;  /* centraliza horizontalmente */
+  padding: 60px 0;
+}
+
+.big-card {
+  position: relative;
+  width: 1200px;
+  height: 400px;
+  border-radius: 18px;
+  overflow: hidden;
+  background-image: url("https://i.postimg.cc/MKdstyLJ/SLIDE-8-1.png");
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.big-card-two{
+  background-image: url("https://i.postimg.cc/7Y6hJ48M/SLIDE-9.png");
+}
+
+.card-anchor {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #3B2D1D;
+  color: #FFFFFF;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 14px;
+  text-decoration: none;
+  font-family: poppins, sans-serif;
+  font-weight: 200;
+}
+
+.big-card-two .card-anchor{
+  background-color: #4E3D1B;
+}
+
+.card-content {
+  /* empurra o conteúdo para a direita, mantendo espaço livre à esquerda */
+  margin-left: auto;
+  margin-right: 40px;
+  max-width: 500px;
+}
+
+.card-content h2 {
+  color: #FFF;
+  font-family: Rubik;
+  font-size: 47px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.47px;
+  text-align: right;
+}
+
+.card-content p {
+  color: #FFF;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin: 10px 0;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: right;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: Poppins, sans-serif;
+  font-weight: 300;
+}
+
+.btn-primary {
+  background: rgba(0, 0, 0, 0.10);
+  color: #FFFFFF;
+}
+
+.btn-secondary {
+  background-color: #3B2D1D;
+  color: #FFFFFF;
+}
+
+.big-card-two .btn-primary{
+  background: rgba(0, 0, 0, 0.10);
+  color: #FFFFFF;
+}
+
+.big-card-two .btn-secondary {
+  background-color: #4E3D1B;
+  color: #FFFFFF;
+}
