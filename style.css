@@ -242,8 +242,9 @@ b {
 .links-section {
   display: flex;
   justify-content: center;
-  padding: 60px 20px;
 }
+
+
 .links-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -318,4 +319,105 @@ b {
 /* Revela a tarja no hover */
 .big-link:hover .overlay {
   transform: translateY(0);
+}
+
+
+/* footer */
+
+footer{
+  background: url('https://i.postimg.cc/XqBys9qV/Frame-33.png') center/cover no-repeat;
+  text-align: center;
+  padding: 80px 20px;
+  color: #000; /* ou a cor que estiver no Figma */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 300px;
+}
+
+footer h1 {
+  font-size: 68px;
+  margin-bottom: 16px;
+  font-weight: 300;
+  font-family: "Rubik", sans-serif;
+  color: #211200;
+}
+
+footer p {
+  color: #202020;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 17.895px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 50px;
+}
+
+.btn-contato-footer {
+  background-color: #202020; 
+  padding: 12px 24px;
+  border-radius: 17px;
+  font-weight: bold;
+  color: white !important;
+  text-decoration: none;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+}
+
+/* RODAPÉ PRINCIPAL */
+.footer-main {
+width: 100%;
+}
+.footer-container {
+  max-width: 1400px;
+  height: 200px; 
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 50px 0px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #606060;
+  border-radius: 12px;
+}
+.footer-col {
+  flex: 1;
+}
+
+.footer-col.logo { 
+  flex: 2; 
+} 
+
+.footer-col h4 {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 17.895px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: left;
+  margin-bottom: 16px;
+}
+.footer-col ul li {
+  margin-bottom: 8px;
+  text-decoration: none;
+  list-style: none;
+  text-align: left;
+}
+.footer-col ul li a {
+  font-size: 14px;
+  color: #FFFFFF80;
+  text-decoration: none;
+}
+.socials {
+  display: flex;
+  gap: 12px;
+}
+.socials img {
+  width: 24px;
+  height: 24px;
 }
