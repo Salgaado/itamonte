@@ -40,7 +40,21 @@ body, html {
   font-weight: bold;
 }
 
+#heroBg1, #heroBg2 {
+  background-size: cover;       /* ou ‘contain’, dependendo do efeito desejado */
+  background-repeat: no-repeat; /* evita repetições */
+  }
+
 /* Navegação */
+#menu-toggler {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
 .nav-menu {
   list-style: none;
   display: flex;
@@ -125,6 +139,10 @@ b {
 
 
 /* catalogos */
+
+.mobile-img-wrapper {
+  display: none;
+}
 
 .landing-section {
   display: flex;
@@ -325,7 +343,7 @@ b {
 /* footer */
 
 footer{
-  background: url('https://i.postimg.cc/XqBys9qV/Frame-33.png') center/cover no-repeat;
+  background: url('https://i.postimg.cc/857JcNNj/FOOTER-ITAMONTE.png') center/cover no-repeat;
   text-align: center;
   padding: 80px 20px;
   color: #000; /* ou a cor que estiver no Figma */
@@ -374,6 +392,7 @@ width: 100%;
 .footer-container {
   max-width: 1400px;
   height: 200px; 
+  
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -420,4 +439,235 @@ width: 100%;
 .socials img {
   width: 24px;
   height: 24px;
+}
+
+@media (max-width: 1280px) {
+  footer{
+    padding-top: 150px;
+  }
+  
+}
+
+
+@media (max-width: 780px) {
+
+  .logo img{
+    width: 50%;
+  }
+
+
+  #heroBg1, #heroBg2 {
+  background-size: cover;       /* ou ‘contain’, dependendo do efeito desejado */
+  background-repeat: no-repeat; /* evita repetições */
+  }
+
+  #menu-toggler {
+    display: block;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    gap: 0; /* remove o gap entre os itens */
+  }
+
+  .nav-menu a{
+    font-size: 14px;
+  }
+
+
+  /* defina max-height grande o suficiente para caber todos os <li> */
+  .nav-menu.open {
+    max-height: 300px;
+    padding: 10px;
+  }
+  
+  .nav-menu li {
+    margin: 8px 0;
+    text-align: center;
+  }
+
+  .hero-content{
+    margin-top: 150px; /* reduz o espaçamento superior para telas menores */
+    padding: 20px; /* reduz o padding interno */
+  }
+
+  .hero-content h1 {
+    font-size: 48px; /* ajuste o tamanho da fonte para telas menores */
+  }
+  .hero-content p {
+    font-size: 16px; /* ajuste o tamanho da fonte para telas menores */
+  }
+
+
+  /* catalogos */
+
+  .mobile-img-wrapper {
+    display: block;
+    width: 100%;
+    height: auto;        /* ou uma altura fixa, se preferir */
+    margin-bottom: 16px; /* espaçamento antes do anchor/corpo */
+  }
+  .mobile-img-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px; /* mesmo radius do card */
+    object-fit: cover;   /* garante filling sem distorcer */
+    scale: 2.5;
+  }
+
+  /* ajustes de texto, se precisar empurrar pra baixo */
+  .card-anchor,
+  .card-content {
+    position: relative;
+    z-index: 2; /* garante que texto fique sobre a imagem */
+  }
+
+  .landing-section {
+    padding: 40px 20px; /* reduz o padding para telas menores */
+  }
+
+  .big-card {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    background-image: none !important;
+    background-color: #766D63;
+  }
+
+  .big-card-two {
+    background-image: none !important;
+    background-color: #8B7448;
+  }
+
+  .card-content {
+    margin-left: 0; /* remove o margin-left para centralizar o conteúdo */
+    margin-right: 0; /* remove o margin-right para centralizar o conteúdo */
+    max-width: 100%; /* faz o conteúdo ocupar toda a largura disponível */
+  }
+
+  .card-content h2 {
+    margin-left: 0; /* remove o margin-left para centralizar o conteúdo */
+    text-align: center; /* centraliza o texto */
+  } 
+  .big-card h2 {
+    font-size: 32px; /* reduz o tamanho da fonte para telas menores */
+  }
+  .big-card p {
+    font-size: 14px; /* reduz o tamanho da fonte para telas menores */    
+    text-align: center;
+  }
+
+  .card-anchor {
+    position: static; /* remove a posição absoluta */
+    margin-bottom: 16px; /* adiciona margem inferior para espaçamento */
+    text-align: center; /* centraliza o texto do link */
+    font-size: 10px;
+  }
+  .card-buttons {
+    flex-direction: column; /* empilha os botões verticalmente */
+    align-items: center; /* centraliza os botões */
+  }
+  .btn-primary,
+  .btn-secondary {
+    width: 100%; /* faz os botões ocuparem toda a largura disponível */
+    font-size: 14px; /* ajusta o tamanho da fonte para telas menores */
+  } 
+
+
+  /* vitrine */
+
+  .links-container {
+    grid-template-columns: repeat(2, 1fr); /* reduz para 2 colunas em telas menores */
+    gap: 0px; /* reduz o espaçamento entre os links */
+    height: 100%;
+  }
+  .big-link {
+    height: 240px; /* reduz a altura dos links */      
+  }
+
+  .image-wrapper img {
+    width: 75%; /* faz a imagem ocupar toda a largura do link */
+    object-fit: cover; /* mantém a proporção da imagem */
+  }
+
+  .overlay {
+    font-size: 10px; /* reduz o tamanho da fonte da tarja */
+    padding: 8px 0; /* reduz o padding interno da tarja */
+  }
+
+
+
+  /* footer */
+
+  footer {
+    padding: 40px 20px; /* reduz o padding interno */
+    height: auto; /* ajusta a altura para caber o conteúdo */
+    background-image: url(https://i.postimg.cc/Zq3xR8cG/BG-FOOTER-MOBILE.png);
+  }
+  footer h1 {
+    font-size: 40px; /* reduz o tamanho da fonte do título */
+  }   
+  footer p {
+    font-size: 14px; /* reduz o tamanho da fonte do parágrafo */
+  }
+
+  .footer-hero{
+    margin: 20px;
+  }
+  .btn-contato-footer {
+    padding: 10px 20px; /* reduz o padding interno do botão */
+    font-size: 14px; /* reduz o tamanho da fonte do botão */      
+  }   
+  .footer-container {
+    flex-direction: column; /* empilha as colunas verticalmente */
+    align-items: center; /* centraliza o conteúdo */
+    padding: 20px; /* reduz o padding interno */
+  }
+  .footer-col {
+    width: 100%; /* faz as colunas ocuparem toda a largura disponível */
+    text-align: center; /* centraliza o texto das colunas */  
+  }
+  .footer-col.logo {
+    margin-bottom: 20px; /* adiciona margem inferior para espaçamento */
+  }
+  .footer-col h4 {
+    font-size: 16px; /* reduz o tamanho da fonte dos títulos */ 
+    text-align: center;
+  }
+
+  .footer-col ul li {
+    text-align: center;
+  }
+
+  .footer-col ul li a {
+    font-size: 12px; /* reduz o tamanho da fonte dos links */
+    text-align: center;
+  }
+  .socials {  
+    justify-content: center; /* centraliza os ícones sociais */
+  }
+  .socials img {
+    width: 20px; /* reduz o tamanho dos ícones sociais */
+    height: 20px; /* reduz o tamanho dos ícones sociais */    
+  }
+  .footer-main {
+    width: 100%;
+  }
+  .footer-container {
+    max-width: 100%; /* ajusta a largura máxima para telas menores */
+    height: auto; /* ajusta a altura para caber o conteúdo */
+    flex-direction: column; /* empilha as colunas verticalmente */
+    align-items: center; /* centraliza o conteúdo */    
+  }     
 }
